@@ -126,6 +126,9 @@ export default function App() {
           </a>
         </div>
       </section>
+      <button className="fixed bottom-4 right-5 text-white bg-blue-700 px-2 py-1 rounded-lg hover:bg-blue-900 transition-colors">
+        Descargar CV
+      </button>
     </div>
   );
 }
