@@ -1,13 +1,14 @@
 import Navbar from "./components/Navbar";
 import Navbarlova from "./components/Navbarlova";
+import "./App.css";
 
 export default function App() {
   return (
-    <div className="bg-white text-gray-800 font-sans">
+    <div className="text-gray-800">
       {/* Sección Inicio */}
       {/* <Navbarlova /> */}
       <Navbar />
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-l from-blue-950 to-blue-900 p-10">
+      <section className="min-h-screen flex items-center justify-center  p-10">
         <div className="text-center max-w-2xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Hola, soy Jair Fernández
@@ -26,7 +27,7 @@ export default function App() {
       </section>
 
       {/* Sobre mí */}
-      <section className="py-20 px-6 bg-gray-100" id="sobre-mi">
+      <section className="py-20 px-6 " id="sobre-mi">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-semibold mb-6">Sobre mí</h2>
           <p className="text-lg leading-relaxed">
@@ -74,7 +75,7 @@ export default function App() {
       </section>
 
       {/* Mantenimiento */}
-      <section className="py-20 px-6 bg-gray-100" id="mantenimiento">
+      <section className="py-20 px-6 " id="mantenimiento">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-semibold mb-10">
             Planes de Mantenimiento
@@ -126,7 +127,7 @@ export default function App() {
           </a>
         </div>
       </section>
-      <button className="fixed bottom-4 right-5 text-white bg-blue-700 px-2 py-1 rounded-lg hover:bg-blue-900 transition-colors">
+      <button className="hidden sm:fixed bottom-4 right-5 bg-blue-700 px-2 py-1 rounded-lg hover:bg-blue-900 transition-colors">
         Descargar CV
       </button>
     </div>

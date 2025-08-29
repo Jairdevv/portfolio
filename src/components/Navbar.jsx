@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { X, Menu } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,25 +16,27 @@ const Navbar = () => {
     };
   }, []);
 
-  const leftItems = ["Home", "Sobre mí"];
+  const leftItems = ["Inicio", "Sobre mí"];
   const centerItem = "Portafolio";
   const rightItems = ["Proyectos", "Contacto"];
 
   return (
-    <nav className="text-white fixed top-3 left-0 right-0 z-50">
+    <nav className=" fixed top-3 left-0 right-0 z-50">
       <div className="container mx-auto px-6">
         {/* flex items-center justify-between h-16 */}
         <div
-          className={`hidden sm:flex h-16 shadow-md w-full lg:w-[80%] mx-auto rounded-4xl ${
-            isScrolled ? "backdrop-blur-md" : "bg-transparent"
+          className={`flex h-16 shadow-md w-full lg:w-[80%] mx-auto rounded-4xl p-3 transition-all duration-300 z-50 ${
+            isScrolled
+              ? "bg-background/80 backdrop-blur-md border border-border"
+              : "bg-background/80 border sm:border-0 sm:bg-transparent"
           }`}
         >
-          <ul className="flex items-center justify-around w-full">
-            <li className="flex gap-10 w-[30%] justify-around mx-0">
+          <ul className="flex items-center justify-around w-[90%] sm:w-full">
+            <li className="hidden sm:flex gap-5 md:gap-10 w-[30%] justify-around mx-0">
               {leftItems.map((item) => (
                 <a
                   key={item}
-                  className="text-foreground/80 hover:text-primary transition-colors cursor-pointer"
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300 cursor-pointer"
                   href={`#${item.toLowerCase().replace(" ", "-")}`}
                 >
                   {item}
@@ -41,17 +44,17 @@ const Navbar = () => {
               ))}
             </li>
 
-            <li className="text-2xl font-bold cursor-pointer hover:text-blue-500 text-center mx-0">
-              <a href="">
-                <h2 className="text-2xl font-bold text-white">{centerItem}</h2>
-              </a>
+            <li className="text-2xl font-bold cursor-pointer text-center mx-0">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary-foreground">
+                {centerItem}
+              </h2>
             </li>
 
-            <li className="flex gap-10 w-[30%] justify-around">
+            <li className="hidden sm:flex gap-5 md:gap-10 w-[30%] justify-around">
               {rightItems.map((item) => (
                 <a
                   key={item}
-                  className="text-foreground/80 hover:text-primary transition-colors cursor-pointer"
+                  className="text-foreground/80 hover:text-primary duration-300 transition-colors cursor-pointer"
                   href={`#${item.toLowerCase().replace(" ", "-")}`}
                 >
                   {item}
@@ -61,7 +64,35 @@ const Navbar = () => {
           </ul>
 
           {/* Mobile Menu Button */}
+          <button
+            variant="ghost"
+            size="md"
+            className="sm:hidden trasnsition-all text-primary-foreground"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="sm:hidden py-5 animate-fade-in  rounded-4xl backdrop-blur-md bg-overlay mt-2">
+            <ul className="flex flex-col items-center gap-7">
+              {leftItems.concat(rightItems).map((item) => (
+                <li key={item} className="py-2">
+                  <a
+                    className="text-foreground/80 hover:text-primary transition-colors"
+                    href={`#${item.toLowerCase().replace(" ", "-")}`}
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <button className="text-foreground w-[90%] flex justify-center mx-auto mt-2 glow-effect bg-background/90 border border-gray-700/70 rounded-xl py-1">
+              Descargar CV
+            </button>
+          </div>
+        )}
       </div>
     </nav>
   );
