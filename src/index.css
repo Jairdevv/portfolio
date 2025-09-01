@@ -1,63 +1,17 @@
-/* @import "tailwindcss";
-
-@layer base {
+/* @layer base {
   :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-weight: 400;
-
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: hsl(240, 10%, 3.9%);
-
-    --foreground: 0 0% 98%;
 
     --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
 
     --primary: 200 98% 39%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 200 100% 50%;
 
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-
-    /* Professional gradients */
-/*--gradient-primary: linear-gradient(
-      135deg,
-      hsl(var(--primary)),
-      hsl(var(--primary-glow))
-    );
-    --gradient-hero: linear-gradient(
-      135deg,
-      hsl(var(--background)) 0%,
-      hsl(240 10% 2%) 100%
-    );
-    --gradient-card: linear-gradient(
-      145deg,
-      hsl(var(--card)) 0%,
-      hsl(240 8% 6%) 100%
-    );
-
-    /* Elegant shadows */
-/* --shadow-elegant: 0 25px 50px -12px hsl(var(--primary) / 0.25);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.15);
-    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
-
-    /* Smooth transitions */
-/* --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 }
-
 /* button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -85,6 +39,7 @@
   --color-foreground: oklch(0.98 0 0);
   --color-primary: oklch(0.6 0.3 200);
   --color-primary-foreground: oklch(0.98 0 0);
+  --primary-glow: 200 100% 50%;
   --color-secondary: oklch(0.16 0.02 264);
   --color-secondary-foreground: oklch(0.98 0 0);
   --color-muted: oklch(0.16 0.02 264);
@@ -98,6 +53,32 @@
 
   /* Animaciones */
   --animate-fade-in: fade-in 0.3s ease-in-out;
+
+  /* Transiciones */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* Elegant shadows */
+  --shadow-elegant: 0 25px 50px -12px hsl(var(--primary) / 0.25);
+  --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.15);
+  --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
+
+  /* Profesional gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    hsl(var(--primary)),
+    hsl(var(--primary-glow))
+  );
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(var(--background)) 0%,
+    hsl(240 10% 2%) 100%
+  );
+  --gradient-card: linear-gradient(
+    145deg,
+    hsl(var(--card)) 0%,
+    hsl(240 8% 6%) 100%
+  );
 }
 
 @layer base {
