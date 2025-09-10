@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Navbarlova from "./components/Navbarlova";
 import Hero from "./components/Hero";
 import "./App.css";
+import { Download } from "lucide-react";
 
 export default function App() {
   return (
@@ -112,7 +113,9 @@ export default function App() {
           </a>
         </div>
       </section>
-      <button className="hidden sm:fixed bottom-4 right-5 bg-blue-700 px-2 py-1 rounded-lg hover:bg-blue-900 transition-colors">
+      <button className="hidden sm:flex sm:fixed justify-center items-center gap-2 bottom-4 right-5 px-2 text-foreground bg-primary/20 border border-primary/30 rounded-xl py-2 hover:bg-primary/40 transition-colors duration-300">
+
+        <Download size={16} />
         Descargar CV
       </button>
     </div>

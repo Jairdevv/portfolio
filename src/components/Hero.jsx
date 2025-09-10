@@ -3,11 +3,30 @@ import { useEffect, useState } from "react";
 
 
 const Hero = () => {
-  const [isVisible, setIsVisible] = useState(false)
+  // const [isVisible, setIsVisible] = useState(false)
+  const [currentWord, setCurrentWord] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+
+  const words = ["Ingeniero de software", "Desarrollador web", "Diseñador", "Programador"];
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    const animationCycle = () => {
+      setIsVisible(false);
+
+      setTimeout(() => {
+        setCurrentWord((prev) => (prev + 1) % words.length);
+
+        setTimeout(() => {
+          setIsVisible(true);
+        }, 200);
+      }, 300);
+    };
+
+    const interval = setInterval(animationCycle, 2000);
+
+    return () => clearInterval(interval);
+  }, [words.length]);
 
   return (
     <section id="inicio" className="min-h-screen flex items-center justify-center py-20 px-6 relative overflow-hidden">
@@ -18,11 +37,17 @@ const Hero = () => {
         <div className="text-center animate-fade-in">
 
           <div className="">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
               <span className="text-foreground">Hola, soy Jair</span>
               <br />
-              <span className="hero-text animate-glow-pulse">
-                Developer
+              <span
+                key={currentWord}
+                className={`bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent inline-block transition-all duration-500 ease-out ${isVisible
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 -translate-y-5'
+                  }`}
+              >
+                {words[currentWord]}
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -32,10 +57,10 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-5 sm:mb-12">
-            <button size="lg" className="glow-effect px-8 py-6 text-lg">
+            <button className="bg-gradient-to-r from-primary/30 to-primary-glow/60 text-primary-foreground px-7 py-3 text-lg font-medium rounded-lg shadow-glow hover:shadow-elegant hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
               Ver mis proyectos
             </button>
-            <button variant="outline" size="lg" className="px-8 py-6 text-lg">
+            <button className="border border-overlay text-foreground hover:bg-secondary px-7 py-3 text-lg rounded-lg hover:scale-105 transition-all duration-300 cursor-pointer">
               Contactar
             </button>
           </div>
