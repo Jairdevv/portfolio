@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import { useEffect, useState } from "react";
 
 
@@ -8,7 +8,7 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(true);
 
 
-  const words = ["Ingeniero de software", "Desarrollador web", "Diseñador", "Programador"];
+  const words = ["Ingeniero de software", "Desarrollador web", "Diseñador UX/UI"];
 
   useEffect(() => {
     const animationCycle = () => {
@@ -51,8 +51,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Ingeniero de Software especializado en crear experiencias digitales
-              excepcionales con tecnologías modernas y arquitecturas escalables.
+              Desarrollo aplicaciones web fullstack con Node.js, React y PostgreSQL, enfocadas en escalabilidad y buen rendimiento
             </p>
           </div>
 
@@ -61,7 +60,8 @@ const Hero = () => {
               Ver mis proyectos
             </button>
             <button className="border border-overlay text-foreground hover:bg-secondary px-7 py-3 text-lg rounded-lg hover:scale-105 transition-all duration-300 cursor-pointer">
-              Contactar
+              <Download size={16} className="inline mr-2" />
+              Descargar CV
             </button>
           </div>
         </div>

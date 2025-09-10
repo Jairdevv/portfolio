@@ -3,14 +3,14 @@ import Navbarlova from "./components/Navbarlova";
 import Hero from "./components/Hero";
 import "./App.css";
 import { Download } from "lucide-react";
+import Projects from "./components/Projects";
 
 export default function App() {
   return (
     <div className="text-gray-800">
-      {/* Sección Inicio */}
-      {/* <Navbarlova /> */}
       <Navbar />
       <Hero />
+      <Projects />
 
       {/* Sobre mí */}
       <section className="py-20 px-6 " id="sobre-mi">
@@ -113,11 +113,6 @@ export default function App() {
           </a>
         </div>
       </section>
-      <button className="hidden sm:flex sm:fixed justify-center items-center gap-2 bottom-4 right-5 px-2 text-foreground bg-primary/20 border border-primary/30 rounded-xl py-2 hover:bg-primary/40 transition-colors duration-300">
-
-        <Download size={16} />
-        Descargar CV
-      </button>
     </div>
   );
 }
