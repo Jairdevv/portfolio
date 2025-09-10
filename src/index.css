@@ -39,7 +39,7 @@
   --color-foreground: oklch(0.98 0 0);
   --color-primary: oklch(0.6 0.3 200);
   --color-primary-foreground: oklch(0.98 0 0);
-  --primary-glow: 200 100% 50%;
+  --color-primary-glow: hsl(200 100% 50%);
   --color-secondary: oklch(0.16 0.02 264);
   --color-secondary-foreground: oklch(0.98 0 0);
   --color-muted: oklch(0.16 0.02 264);
