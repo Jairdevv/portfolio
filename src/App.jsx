@@ -1,9 +1,9 @@
 import Navbar from "./components/Navbar";
-import Navbarlova from "./components/Navbarlova";
 import Hero from "./components/Hero";
 import "./App.css";
 import { Download } from "lucide-react";
 import Projects from "./components/Projects";
+import About from "./components/About";
 
 export default function App() {
   return (
@@ -13,54 +13,9 @@ export default function App() {
       <Projects />
 
       {/* Sobre mí */}
-      <section className="py-20 px-6 " id="sobre-mi">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-6">Sobre mí</h2>
-          <p className="text-lg leading-relaxed">
-            Soy un desarrollador web apasionado por construir soluciones
-            digitales funcionales y atractivas. Me especializo en la creación de
-            sitios web para empresas que quieren destacar en internet y para
-            instituciones educativas que buscan modernizar su presencia digital.
-            Trabajo con tecnologías modernas y me enfoco en la experiencia del
-            usuario.
-          </p>
-        </div>
-      </section>
+      <About />
 
-      {/* Servicios */}
-      <section className="py-20 px-6" id="servicios">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-10">Servicios</h2>
-          <div className="grid md:grid-cols-2 gap-10">
-            <div className="bg-white p-6 rounded-xl shadow">
-              <h3 className="text-2xl font-bold mb-4">
-                Sitios Web Corporativos
-              </h3>
-              <ul className="list-disc ml-6 space-y-2 text-lg">
-                <li>Página de inicio profesional</li>
-                <li>Sección de servicios</li>
-                <li>Formulario de contacto</li>
-                <li>Integración con redes sociales y mapa</li>
-                <li>SEO básico</li>
-              </ul>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow">
-              <h3 className="text-2xl font-bold mb-4">Sitios Web Educativos</h3>
-              <ul className="list-disc ml-6 space-y-2 text-lg">
-                <li>Página de inicio institucional</li>
-                <li>Listado de cursos o programas</li>
-                <li>Calendario académico</li>
-                <li>
-                  Integraciones con plataformas (Google Classroom, Zoom, Moodle)
-                </li>
-                <li>Formulario de inscripción o contacto</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mantenimiento */}
+      {/* Mantenimiento
       <section className="py-20 px-6 " id="mantenimiento">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-semibold mb-10">
@@ -96,7 +51,7 @@ export default function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contacto */}
       <section className="py-20 px-6" id="contacto">

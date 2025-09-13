@@ -19,12 +19,12 @@ const Navbar = () => {
 
   const leftItems = [
     { href: "#inicio", label: "Inicio" },
-    { href: "#sobre-mi", label: "Sobre mí" },
+    { href: "#proyectos", label: "Proyectos" },
   ];
   const centerItem = { href: "#inicio", label: "Portafolio" };
 
   const rightItems = [
-    { href: "#proyectos", label: "Proyectos" },
+    { href: "#sobre-mi", label: "Sobre mí" },
     { href: "#contacto", label: "Contacto" },
   ];
 

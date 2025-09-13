@@ -55,7 +55,7 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-5 sm:mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 sm:mb-12">
             <button className="bg-gradient-to-r from-primary/30 to-primary-glow/60 text-primary-foreground px-7 py-3 text-lg font-medium rounded-lg shadow-glow hover:shadow-elegant hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
               Ver mis proyectos
             </button>
