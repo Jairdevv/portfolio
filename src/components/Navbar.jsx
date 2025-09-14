@@ -37,7 +37,7 @@ const Navbar = () => {
     <nav className=" fixed top-3 left-0 right-0 z-50 px-6">
       <div
         className={`flex h-14 sm:h-16 shadow-lg w-full lg:w-[80%] mx-auto rounded-4xl p-3 transition-colors duration-300 z-50 ${isScrolled
-          ? "bg-background/90 backdrop-blur-md border border-primary/30"
+          ? "bg-background-90 backdrop-blur-md border border-primary-30"
           : "bg-transparent border-0"
           }`}
       >
@@ -104,7 +104,7 @@ const Navbar = () => {
             {leftItems.concat(rightItems).map((item) => (
               <li key={item.href} className="py-2">
                 <a
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                  className="text-foreground hover:text-primary transition-colors duration-300"
                   href={item.href}
                   onClick={() => handleNavClick(item)}
                 >

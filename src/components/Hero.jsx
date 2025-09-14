@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 
 const Hero = () => {
-  // const [isVisible, setIsVisible] = useState(false)
   const [currentWord, setCurrentWord] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
