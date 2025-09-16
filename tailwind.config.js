@@ -7,8 +7,11 @@ export default {
     extend: {
       colors: {
         primary: "var(--primary)",
+        "primary-10": "var(--primary-10)",
+        "primary-20": "var(--primary-20)",
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "foreground-80": "var(--foreground-80)",
         "primary-glow": "var(--color-primary-glow)",
         secondary: "var(--secondary)",
         muted: "var(--muted)",
@@ -20,6 +23,7 @@ export default {
         "primary-30": "var(--primary-30)",
       },
       boxShadow: {
+        primary: "var(--shadow-primary)",
         glow: "var(--shadow-glow)",
         elegant: "var(--shadow-elegant)",
         card: "var(--shadow-card)",
@@ -30,5 +34,5 @@ export default {
     },
   },
   plugins: [tailwindcssAnimate],
-  darkMode: "class", // para usar .dark
+  darkMode: "class",
 };
