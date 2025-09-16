@@ -34,11 +34,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" fixed top-3 left-0 right-0 z-50 px-6">
+    <nav className=" fixed top-3 left-0 right-0 z-40 px-6">
       <div
-        className={`flex h-14 sm:h-16 shadow-lg w-full lg:w-[80%] mx-auto rounded-4xl p-3 transition-colors duration-300 z-50 ${isScrolled
-          ? "bg-background/90 backdrop-blur-md border border-primary/30"
-          : "bg-transparent border-0"
+        className={`flex h-14 sm:h-16 shadow-lg w-full lg:w-[80%] mx-auto rounded-4xl p-3 z-50 ${isScrolled
+          ? "bg-background-90 backdrop-blur-md border border-primary-30"
+          : "bg-transparent border border-transparent"
           }`}
       >
         <ul className="flex items-center justify-around w-[90%] sm:w-full">
@@ -46,7 +46,7 @@ const Navbar = () => {
             {leftItems.map((item) => (
               <a
                 key={item.href}
-                className={`relative text-foreground/80 hover:text-primary transition-all duration-300 cursor-pointer group ${activeSection === item.href ? "text-primary" : ""
+                className={`relative text-foreground-80 hover:text-primary transition-all duration-300 cursor-pointer group ${activeSection === item.href ? "text-primary" : ""
                   }`}
                 href={item.href}
                 onClick={() => handleNavClick(item)}
@@ -62,7 +62,7 @@ const Navbar = () => {
             ))}
           </li>
 
-          <li className="text-2xl font-bold cursor-pointer text-center">
+          <li className="text-2xl font-bold select-none text-center">
             <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
               {centerItem.label}
             </h2>
@@ -72,7 +72,7 @@ const Navbar = () => {
             {rightItems.map((item) => (
               <a
                 key={item.href}
-                className={`relative text-foreground/80 hover:text-primary duration-300 transition-all cursor-pointer group ${activeSection === item.href ? "text-primary" : ""
+                className={`relative text-foreground-80 hover:text-primary duration-300 transition-all cursor-pointer group ${activeSection === item.href ? "text-primary" : ""
                   }`}
                 href={item.href}
                 onClick={() => handleNavClick(item)}
@@ -91,7 +91,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="sm:hidden transition-all text-primary-foreground"
+          className="sm:hidden transition-all text-foreground-80"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -99,12 +99,12 @@ const Navbar = () => {
       </div>
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="sm:hidden py-5 animate-fade-in rounded-4xl backdrop-blur-xl bg-background/90 mt-2 border border-primary/20 shadow-lg shadow-primary/10">
+        <div className="sm:hidden py-5 animate-fade-in rounded-4xl backdrop-blur-xl bg-background-90 mt-2 border border-primary-30 shadow-lg shadow-primary">
           <ul className="flex flex-col items-center gap-7">
             {leftItems.concat(rightItems).map((item) => (
               <li key={item.href} className="py-2">
                 <a
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                  className="text-foreground hover:text-primary transition-colors duration-300"
                   href={item.href}
                   onClick={() => handleNavClick(item)}
                 >
@@ -113,7 +113,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <button className="text-foreground w-[90%] flex justify-center items-center gap-2 mx-auto mt-4 glow-effect bg-primary/10 border border-primary/30 rounded-xl py-2 hover:bg-primary/20 transition-all duration-300">
+          <button className="text-foreground w-[90%] flex justify-center items-center gap-2 mx-auto mt-4 glow-effect bg-primary-10 border border-primary-30 rounded-xl py-2 hover:bg-primary-20 transition-all duration-300">
             <Download size={16} />
             Descargar CV
           </button>
