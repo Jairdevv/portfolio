@@ -6,7 +6,6 @@ const projects = [
     tech: ["React", "Node.js", "PostgreSQL"],
     demoUrl: "#",
     githubUrl: "#",
-    gradient: "from-primary/15 to-primary-glow/10",
   },
   {
     title: "E-commerce",
@@ -15,7 +14,6 @@ const projects = [
     tech: ["Next.js", "Stripe", "MongoDB"],
     demoUrl: "#",
     githubUrl: "#",
-    gradient: "from-primary-glow/20 to-primary/15",
   },
   {
     title: "Blog Personal",
@@ -24,7 +22,6 @@ const projects = [
     tech: ["React", "Express", "MySQL"],
     demoUrl: "#",
     githubUrl: "#",
-    gradient: "from-primary/20 to-primary-glow/25",
   },
   {
     title: "Red Social",
@@ -33,7 +30,6 @@ const projects = [
     tech: ["React", "Socket.io", "Redis"],
     demoUrl: "#",
     githubUrl: "#",
-    gradient: "from-primary-glow/15 to-primary/20",
   },
 ];
 

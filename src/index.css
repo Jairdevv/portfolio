@@ -11,6 +11,7 @@
 
   /* Colores principales */
   --primary: rgb(0, 170, 199);
+  --primary-5: rgb(0, 170, 199, 0.05);
   --primary-10: rgb(95, 155, 255, 0.1);
   --primary-20: rgb(95, 155, 255, 0.2);
   --primary-30: rgb(95, 155, 255, 0.3);
@@ -60,6 +61,7 @@
   /* Extras */
   --color-primary-glow: rgb(0, 128, 255);
   --color-primary-glow-10: rgb(0, 128, 255, 0.1);
+  --color-primary-glow-30: rgb(0, 128, 255, 0.3);
   --color-primary-glow-60: rgb(0, 128, 255, 0.6);
   --color-overlay: rgba(55, 65, 81, 0.2);
   --radius-4xl: 2rem;
@@ -93,6 +95,7 @@
 /* === Tema oscuro === */
 .dark {
   --background: rgb(1, 2, 7);
+  --background-50: rgb(1, 2, 7, 0.5);
   --background-90: rgb(1, 2, 7, 0.9);
 
   --foreground: rgb(245, 245, 247);

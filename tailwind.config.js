@@ -7,11 +7,13 @@ export default {
     extend: {
       colors: {
         primary: "var(--primary)",
+        "primary-5": "var(--primary-5)",
         "primary-10": "var(--primary-10)",
         "primary-20": "var(--primary-20)",
         "primary-30": "var(--primary-30)",
         "primary-80": "var(--primary-80)",
         background: "var(--background)",
+        "background-50": "var(--background-50)",
         foreground: "var(--foreground)",
         "foreground-80": "var(--foreground-80)",
         "primary-glow": "var(--color-primary-glow)",
@@ -25,9 +27,6 @@ export default {
       },
       backgroundColor: {
         "background-90": "var(--background-90)",
-      },
-      borderColor: {
-        "primary-30": "var(--primary-30)",
       },
       keyframes: {
         "fade-in": {
