@@ -14,9 +14,7 @@
   --primary-10: rgb(95, 155, 255, 0.1);
   --primary-20: rgb(95, 155, 255, 0.2);
   --primary-30: rgb(95, 155, 255, 0.3);
-
-  /* Botones con fondo azul*/
-  --primary-foreground: rgb(255, 255, 255);
+  --primary-80: rgb(95, 155, 255, 0.5);
 
   /* gris para tarjetas */
   --secondary: rgb(240, 242, 245);
@@ -61,12 +59,14 @@
 
   /* Extras */
   --color-primary-glow: rgb(0, 128, 255);
+  --color-primary-glow-10: rgb(0, 128, 255, 0.1);
+  --color-primary-glow-60: rgb(0, 128, 255, 0.6);
   --color-overlay: rgba(55, 65, 81, 0.2);
   --radius-4xl: 2rem;
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-  --shadow-elegant: 0 25px 50px -12px rgba(95, 155, 255, 0.25);
+  --shadow-elegant: 0 10px 25px -5px rgba(0, 0, 0, 0.15); /* modo claro */
   --shadow-primary: 0 8px 30px rgba(0, 0, 0, 0.6),
     0 4px 15px rgba(95, 155, 255, 0.2);
   --shadow-glow: 0 0 40px rgba(0, 128, 255, 0.15);
@@ -101,8 +101,6 @@
   --primary: rgb(0, 180, 200);
   --primary-30: rgb(0, 180, 200, 0.3);
 
-  --primary-foreground: rgb(255, 255, 255);
-
   --card: var(--background);
   --card-foreground: var(--foreground);
 
@@ -110,7 +108,7 @@
   --popover-foreground: var(--foreground);
 
   --secondary: rgb(40, 40, 45);
-  --secondary-foreground: rgb(230, 230, 232);
+  --secondary-foreground: rgb(137, 143, 156);
 
   --muted: rgb(140, 140, 150); /* var(--secondary) */
   --muted-foreground: rgb(180, 182, 196); /* oklch(0.704 0.04 256.788) */
@@ -131,6 +129,7 @@
   --chart-5: rgb(165, 100, 25); /* oklch(0.645 0.246 16.439) */
 
   --shadow-primary: 0 10px 15px -1px rgba(0, 128, 255, 0.1);
+  --shadow-elegant: 0 25px 50px -12px rgba(95, 155, 255, 0.25);
 }
 
 /* === Estilos base === */
@@ -146,7 +145,7 @@
 }
 
 /* === Animaciones y utilidades === */
-@keyframes fade-in {
+/* @keyframes fade-in {
   from {
     opacity: 0;
     transform: translateY(-10px);
@@ -159,4 +158,4 @@
 
 .animate-fade-in {
   animation: fade-in 0.3s ease-in-out;
-}
+} */
