@@ -6,7 +6,7 @@ import About from "./components/About";
 import ContactMe from "./components/ContactMe";
 import { useEffect, useState } from "react";
 import { Sun, Moon } from 'lucide-react'
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 
 export default function App() {
@@ -35,7 +35,7 @@ export default function App() {
       <Projects />
       <About />
       <ContactMe />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
