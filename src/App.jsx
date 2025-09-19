@@ -6,6 +6,7 @@ import About from "./components/About";
 import ContactMe from "./components/ContactMe";
 import { useEffect, useState } from "react";
 import { Sun, Moon } from 'lucide-react'
+import Footer from "./components/Footer";
 
 
 export default function App() {
@@ -14,7 +15,7 @@ export default function App() {
 
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add("dark"); // añade la clase a <html>
+      document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
@@ -24,15 +25,17 @@ export default function App() {
     <div className="text-gray-800">
       <button
         onClick={() => setDarkMode(!darkMode)}
-        className="fixed top-2 left-10 cursor-pointer px-4 py-2 rounded-lg bg-primary text-primary-foreground shadow-md z-50"
+        className="fixed bottom-6 right-6 cursor-pointer p-3 rounded-full bg-background-50 hover:bg-primary-10 border border-primary-30 text-primary shadow-lg hover:shadow-xl backdrop-blur-sm transition-all duration-300 z-50 hover:scale-110"
+        aria-label="Cambiar tema"
       >
-        {darkMode ? <Sun /> : <Moon />}
+        {darkMode ? <Sun size={22} /> : <Moon size={22} />}
       </button>
       <Navbar />
       <Hero />
       <Projects />
       <About />
       <ContactMe />
+      <Footer />
     </div>
   );
 }

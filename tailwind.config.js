@@ -16,6 +16,7 @@ export default {
         "background-50": "var(--background-50)",
         foreground: "var(--foreground)",
         "foreground-80": "var(--foreground-80)",
+        "muted-foreground": "var(--muted-foreground)",
         "primary-glow": "var(--color-primary-glow)",
         "primary-glow-10": "var(--color-primary-glow-10)",
         "primary-glow-30": "var(--color-primary-glow-30)",
@@ -45,6 +46,9 @@ export default {
       },
       borderRadius: {
         "4xl": "var(--radius-4xl)",
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
       },
     },
   },
