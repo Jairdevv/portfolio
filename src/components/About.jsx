@@ -24,6 +24,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div
+              key={index}
               className={`group relative bg-background backdrop-blur-md border border-primary-20 rounded-2xl p-6 hover:border-primary-30 transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-elegant animate-fade-in`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
