@@ -34,11 +34,7 @@
   --popover: var(--background);
   --popover-foreground: var(--foreground);
 
-  --muted: rgb(200, 200, 205);
-  --muted-foreground: rgb(165, 165, 165);
-
-  --accent: var(--primary);
-  --accent-foreground: var(--foreground);
+  --muted-foreground: rgb(148, 163, 184);
 
   --destructive: rgb(220, 76, 70);
 
@@ -76,9 +72,9 @@
 
   /* Gradientes */
   --gradient-primary: linear-gradient(
-    135deg,
-    rgb(95, 155, 255),
-    rgb(0, 128, 255)
+    145deg,
+    rgba(0, 170, 199, 0.08) 0%,
+    rgba(0, 170, 199, 0.12) 100%
   );
   --gradient-hero: linear-gradient(
     135deg,
