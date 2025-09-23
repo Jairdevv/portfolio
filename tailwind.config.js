@@ -23,6 +23,8 @@ export default {
         "primary-glow-60": "var(--color-primary-glow-60)",
         overlay: "var(--color-overlay)",
         secondary: "var(--secondary)",
+        "secondary-50": "var(--secondary-50)",
+        "secondary-70": "var(--secondary-70)",
         "secondary-foreground": "var(--secondary-foreground)",
         muted: "var(--muted)",
       },

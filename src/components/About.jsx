@@ -3,13 +3,13 @@ import features from "../data/features";
 
 const About = () => {
   return (
-    <section className="py-20 px-6 relative overflow-hidden" id="sobre-mi">
+    <section className="px-6 relative overflow-hidden" id="sobre-mi">
       <div className="absolute inset-0 bg-gradient-to-b from-background to-background-50 pointer-events-none" />
       <div className="absolute top-32 left-20 w-72 h-72 bg-primary-5 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-40 right-20 w-96 h-96 bg-primary-glow-10 rounded-full blur-3xl animate-pulse delay-500" />
 
 
-      <div className="container max-w-6xl mx-auto relative z-10">
+      <div className="container py-20 pb-11 max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
             Sobre Mí

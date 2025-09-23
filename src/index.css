@@ -19,6 +19,8 @@
 
   /* gris para tarjetas */
   --secondary: rgb(240, 242, 245);
+  --secondary-50: rgb(240, 242, 245, 0.5);
+  --secondary-70: rgb(240, 242, 245, 0.7);
   --secondary-foreground: rgb(28, 28, 30);
 
   /* Colores base (modo claro) */
@@ -107,6 +109,8 @@
   --popover-foreground: var(--foreground);
 
   --secondary: rgb(40, 40, 45);
+  --secondary-50: rgba(40, 40, 45, 0.5);
+  --secondary-70: rgb(40, 40, 45, 0.7);
   --secondary-foreground: rgb(137, 143, 156);
 
   --muted: rgb(140, 140, 150); /* var(--secondary) */
