@@ -28,9 +28,11 @@ const Hero = () => {
   }, [words.length]);
 
   return (
-    <section id="inicio" className="min-h-screen flex items-center justify-center py-20 px-6 relative overflow-hidden">
+    <section id="inicio" className="min-h-screen flex items-center justify-center py-20 pb-10 px-6 relative overflow-hidden">
 
       <div className="absolute inset-0 bg-gradient-to-br from-primary-80 via-transparent to-primary-80 dark:from-primary-20 dark:via-transparent dark:to-primary-glow-10 pointer-events-none" />
+      {/* <div className="absolute top-20 right-20 w-72 h-72 bg-primary-10 delay-700 fill-mode-both transition-colors rounded-full blur-2xl animate-pulse" /> */}
+      {/* <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary-glow-10 rounded-full blur-2xl animate-pulse" /> */}
 
       <div className="container mx-auto py-10 relative z-10">
         <div className="text-center animate-fade-in">
@@ -52,27 +54,29 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 sm:mb-12">
-            <button className="bg-gradient-to-r from-primary-30 to-primary-glow-60 text-foreground px-7 py-3 text-lg font-medium rounded-lg shadow-glow hover:shadow-elegant hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <a href="#proyectos" className="bg-gradient-to-r from-primary-30 to-primary-glow-60 text-foreground px-7 py-3 text-lg font-medium rounded-lg shadow-glow hover:shadow-elegant hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
               Ver mis proyectos
-            </button>
-            <button className="border-2 border-overlay text-foreground hover:bg-secondary px-7 py-3 text-lg rounded-lg hover:scale-105 transition-all duration-300 cursor-pointer">
+            </a>
+            <a href="/CV_Jair_Fernandez.pdf" target="_blank" className="border-2 border-overlay text-foreground hover:bg-secondary px-7 py-3 text-lg rounded-lg hover:scale-105 transition-all duration-300 cursor-pointer">
               <Download size={16} className="inline mr-2" />
               Descargar CV
-            </button>
+            </a>
           </div>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-6 text-secondary-foreground">
           <div className="flex gap-6">
-            <button variant="ghost" size="icon" className="hover:scale-110 transition-transform">
+            <a href="https://github.com/Jairdevv" rel="noopener noreferrer"
+              target="_blank" className="hover:scale-110 transition-transform">
               <Github size={24} />
-            </button>
-            <button variant="ghost" size="icon" className="hover:scale-110 transition-transform">
+            </a>
+            <a href="https://www.linkedin.com/in/jair-fernandez-almeida-895645212/" rel="noopener noreferrer"
+              target="_blank" className="hover:scale-110 transition-transform">
               <Linkedin size={24} />
-            </button>
-            <button variant="ghost" size="icon" className="hover:scale-110 transition-transform">
+            </a>
+            <a href="mailto:jairjavierf3@gmail.com  " className="hover:scale-110 transition-transform">
               <Mail size={24} />
-            </button>
+            </a>
           </div>
 
           <div className="animate-bounce">
@@ -80,9 +84,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      <div className="absolute top-20 right-20 w-72 h-72 bg-primary-10 delay-700 fill-mode-both transition-colors rounded-full blur-2xl animate-pulse" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary-glow-10 rounded-full blur-2xl animate-pulse" />
     </section>
   );
 };

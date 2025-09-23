@@ -3,9 +3,9 @@ import projects from '../data/projects';
 
 const Projects = () => {
   return (
-    <section id="proyectos" className="py-20 px-6 relative overflow-hidden bg-gradient-to-b from-background-50 via-primary-5 to-background-90">
+    <section id="proyectos" className=" px-6 relative overflow-hidden bg-gradient-to-b from-background-50 via-primary-5 to-background-90">
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl py-20 pb-0 mx-auto relative z-10">
         <div className="text-center mb-10 sm:mb-16 animate-fade-in">
           <h2 className="text-foreground text-3xl font-semibold mb-4 text-center">Proyectos Destacados</h2>
           <p className="text-xl text-secondary-foreground max-w-2xl mx-auto leading-relaxed">
