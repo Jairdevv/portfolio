@@ -57,7 +57,7 @@ const Hero = () => {
             <a href="#proyectos" className="bg-gradient-to-r from-primary-30 to-primary-glow-60 text-foreground px-7 py-3 text-lg font-medium rounded-lg shadow-glow hover:shadow-elegant hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
               Ver mis proyectos
             </a>
-            <a href="/CV_Jair_Fernandez.pdf" target="_blank" className="border-2 border-overlay text-foreground hover:bg-secondary px-7 py-3 text-lg rounded-lg hover:scale-105 transition-all duration-300 cursor-pointer">
+            <a href="/Futuro CV.pdf" target="_blank" className="border-2 border-overlay text-foreground hover:bg-secondary px-7 py-3 text-lg rounded-lg hover:scale-105 transition-all duration-300 cursor-pointer">
               <Download size={16} className="inline mr-2" />
               Descargar CV
             </a>

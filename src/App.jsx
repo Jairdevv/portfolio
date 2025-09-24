@@ -7,6 +7,7 @@ import ContactMe from "./components/ContactMe";
 import { useEffect, useState } from "react";
 import { Sun, Moon } from 'lucide-react'
 import Footer from "./components/Footer";
+import { InlineWidget } from 'react-calendly'
 
 
 export default function App() {
