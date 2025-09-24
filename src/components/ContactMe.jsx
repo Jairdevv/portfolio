@@ -106,8 +106,10 @@ const ContactMe = () => {
               </button>
             </div>
           </div>
+
           {/* Modal de Calendly */}
           {isOpen && <ModalCalendly isOpen={isOpen} setIsOpen={setIsOpen} />}
+
           <div className="bg-primary-10 rounded-2xl p-8 backdrop-blur-sm border border-border/50">
             <div className="space-y-6">
               <div>
