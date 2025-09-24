@@ -94,6 +94,7 @@
   --background: rgb(1, 2, 7);
   --background-50: rgb(1, 2, 7, 0.5);
   --background-90: rgb(1, 2, 7, 0.9);
+  --background-card: rgba(1, 5, 10, 0.5);
 
   --foreground: rgb(245, 245, 247);
   --foreground-80: rgb(245, 245, 247, 0.8);

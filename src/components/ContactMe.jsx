@@ -124,7 +124,7 @@ const ContactMe = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-background-50 border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-primary-30"
+                    className="w-full pl-10 pr-4 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-primary-30"
                     placeholder="Tu nombre completo"
                   />
                 </div>
@@ -142,7 +142,7 @@ const ContactMe = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-background-50 border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-primary-30"
+                    className="w-full pl-10 pr-4 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-primary-30"
                     placeholder="tu@email.com"
                   />
                 </div>
@@ -158,7 +158,7 @@ const ContactMe = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-3 py-3 bg-background-50 border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-primary-30"
+                  className="w-full px-3 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-primary-30"
                   placeholder="¿En qué puedo ayudarte?"
                 />
               </div>
@@ -175,7 +175,7 @@ const ContactMe = () => {
                     rows="5"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-background-50 border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 resize-none text-foreground placeholder-placeholder border-primary-30"
+                    className="w-full pl-10 pr-4 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 resize-none text-foreground placeholder-placeholder border-primary-30"
                     placeholder="Cuéntame sobre tu proyecto..."
                   />
                 </div>
