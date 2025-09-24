@@ -1,6 +1,7 @@
 import { Send, Mail, User, MessageSquare, Github, Linkedin, Clock, CheckCircle, Star, Zap, Rocket, Twitter } from 'lucide-react';
 import { contactInfo, socialLinks } from '../data/contactInfo';
 import { useState } from "react";
+import ModalCalendly from './ui/ModalCalendly';
 
 
 
@@ -13,6 +14,7 @@ const ContactMe = () => {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null)
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleChange = (e) => {
     setFormData({
@@ -99,11 +101,13 @@ const ContactMe = () => {
               <p className="text-[rgb(148,163,184)] text-sm mb-4">
                 Podemos agendar una videollamada para discutir tu proyecto en detalle.
               </p>
-              <button className="text-[rgb(0,170,199)] font-medium text-sm hover:text-[rgb(0,128,255)] transition-colors duration-200">
+              <button className="text-[rgb(0,170,199)] font-medium text-sm hover:text-[rgb(0,128,255)] transition-colors duration-200" onClick={() => (setIsOpen(true))}>
                 Agendar llamada →
               </button>
             </div>
           </div>
+          {/* Modal de Calendly */}
+          {isOpen && <ModalCalendly isOpen={isOpen} setIsOpen={setIsOpen} />}
           <div className="bg-primary-10 rounded-2xl p-8 backdrop-blur-sm border border-border/50">
             <div className="space-y-6">
               <div>
