@@ -110,21 +110,21 @@ const ContactMe = () => {
           {/* Modal de Calendly */}
           {isOpen && <ModalCalendly isOpen={isOpen} setIsOpen={setIsOpen} />}
 
-          <div className="bg-primary-10 rounded-2xl p-8 backdrop-blur-sm border border-border/50">
+          <div className="bg-primary-10 rounded-2xl p-8 backdrop-blur-sm border border-primary-30">
             <div className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                   Nombre completo
                 </label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-placeholder w-5 h-5" />
                   <input
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-background-50 border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-muted-foreground"
+                    className="w-full pl-10 pr-4 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-primary-30"
                     placeholder="Tu nombre completo"
                   />
                 </div>
@@ -135,14 +135,14 @@ const ContactMe = () => {
                   Email
                 </label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-placeholder w-5 h-5" />
                   <input
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-background-50 border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-muted-foreground"
+                    className="w-full pl-10 pr-4 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-primary-30"
                     placeholder="tu@email.com"
                   />
                 </div>
@@ -158,7 +158,7 @@ const ContactMe = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-background-50 border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-muted-foreground"
+                  className="w-full px-3 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-primary-30"
                   placeholder="¿En qué puedo ayudarte?"
                 />
               </div>
@@ -168,14 +168,14 @@ const ContactMe = () => {
                   Mensaje
                 </label>
                 <div className="relative">
-                  <MessageSquare className="absolute left-3 top-3 text-muted-foreground w-5 h-5" />
+                  <MessageSquare className="absolute left-3 top-3 text-placeholder w-5 h-5" />
                   <textarea
                     id="message"
                     name="message"
                     rows="5"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-background-50 border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 resize-none text-foreground placeholder-muted-foreground "
+                    className="w-full pl-10 pr-4 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 resize-none text-foreground placeholder-placeholder border-primary-30"
                     placeholder="Cuéntame sobre tu proyecto..."
                   />
                 </div>
