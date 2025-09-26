@@ -33,6 +33,7 @@ export default {
         "secondary-70": "var(--secondary-70)",
         "secondary-foreground": "var(--secondary-foreground)",
         muted: "var(--muted)",
+        "border-input": "var(--border-input)",
       },
       backgroundColor: {
         "background-90": "var(--background-90)",

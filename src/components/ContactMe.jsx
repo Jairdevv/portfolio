@@ -1,42 +1,12 @@
-import { Send, Mail, User, MessageSquare, Github, Linkedin, Clock, CheckCircle, Star, Zap, Rocket, Twitter } from 'lucide-react';
 import { contactInfo, socialLinks } from '../data/contactInfo';
 import { useState } from "react";
 import ModalCalendly from './ui/ModalCalendly';
+import FormContact from './ui/FormContact';
 
 
 
 const ContactMe = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState(null)
   const [isOpen, setIsOpen] = useState(false)
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    try {
-      const response = 0;
-      console.log(response)
-    } catch (error) {
-      console.error("Error submitting form:", error)
-      setSubmitStatus("error")
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   return (
     <section className="py-20 px-6 bg-background relative overflow-hidden" id="contacto">
@@ -110,109 +80,7 @@ const ContactMe = () => {
           {/* Modal de Calendly */}
           {isOpen && <ModalCalendly isOpen={isOpen} setIsOpen={setIsOpen} />}
 
-          <div className="bg-primary-10 rounded-2xl p-8 backdrop-blur-sm border border-primary-30">
-            <div className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Nombre completo
-                </label>
-                <div className="relative">
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-placeholder w-5 h-5" />
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-primary-30"
-                    placeholder="Tu nombre completo"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  Email
-                </label>
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-placeholder w-5 h-5" />
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-primary-30"
-                    placeholder="tu@email.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                  Asunto
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-3 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-primary-30"
-                  placeholder="¿En qué puedo ayudarte?"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Mensaje
-                </label>
-                <div className="relative">
-                  <MessageSquare className="absolute left-3 top-3 text-placeholder w-5 h-5" />
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 resize-none text-foreground placeholder-placeholder border-primary-30"
-                    placeholder="Cuéntame sobre tu proyecto..."
-                  />
-                </div>
-              </div>
-
-              <button
-                onClick={handleSubmit}
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-[rgb(0,170,199)] to-[rgb(0,128,255)] text-white font-semibold py-4 px-6 rounded-xl hover:shadow-lg hover:shadow-[rgb(0,170,199)]/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 group"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                    <span>Enviando...</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Enviar mensaje</span>
-                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                  </>
-                )}
-              </button>
-
-              {/* Mensaje de estado */}
-              {submitStatus && (
-                <div className={`p-4 rounded-xl text-center font-medium ${submitStatus === 'success'
-                  ? 'bg-green-100 text-green-800 border border-green-200'
-                  : 'bg-red-100 text-red-800 border border-red-200'
-                  }`}>
-                  {submitStatus === 'success'
-                    ? '¡Mensaje enviado con éxito! Te responderé pronto.'
-                    : 'Error al enviar el mensaje. Por favor intenta nuevamente.'
-                  }
-                </div>
-              )}
-            </div>
-          </div>
+          <FormContact />
         </div>
       </div>
     </section >
