@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Send, Mail, User, MessageSquare } from 'lucide-react';
+import { Send, Mail, User, MessageSquare, AlertCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 
@@ -13,6 +13,8 @@ const FormContact = () => {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null)
+  const [errors, setErrors] = useState({});
+
 
   useEffect(() => {
     if (submitStatus) {
@@ -40,6 +42,25 @@ const FormContact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
+
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = "El nombre es obligatorio";
+
+    if (!formData.email.trim()) { newErrors.email = "El email es obligatorio" }
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Por favor ingresa un email válido"
+    };
+
+    if (!formData.subject.trim()) newErrors.subject = "El asunto es obligatorio";
+    if (!formData.message.trim()) newErrors.message = "El mensaje es obligatorio";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      setIsSubmitting(false);
+      return;
+    }
+
+    setErrors({});
     try {
       const response = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData, EMAILJS_PUBLIC_KEY);
       console.log("SUCCESS!", response.status, response.text);
@@ -72,6 +93,12 @@ const FormContact = () => {
               placeholder="Tu nombre completo"
             />
           </div>
+          {errors.name && (
+            <div className="flex items-center gap-1 mt-1 text-red-400 text-sm">
+              <AlertCircle className="w-4 h-4" />
+              <span>{errors.name}</span>
+            </div>
+          )}
         </div>
 
         <div>
@@ -90,6 +117,12 @@ const FormContact = () => {
               placeholder="tu@email.com"
             />
           </div>
+          {errors.email && (
+            <div className="flex items-center gap-1 mt-1 text-red-400 text-sm">
+              <AlertCircle className="w-4 h-4" />
+              <span>{errors.email}</span>
+            </div>
+          )}
         </div>
 
         <div>
@@ -105,6 +138,12 @@ const FormContact = () => {
             className="w-full px-3 py-3 bg-background-card border rounded-xl focus:ring-2 focus:ring-primary-80 focus:border-primary outline-none transition-all duration-200 text-foreground placeholder-placeholder border-border-input"
             placeholder="¿En qué puedo ayudarte?"
           />
+          {errors.subject && (
+            <div className="flex items-center gap-1 mt-1 text-red-400 text-sm">
+              <AlertCircle className="w-4 h-4" />
+              <span>{errors.subject}</span>
+            </div>
+          )}
         </div>
 
         <div>
@@ -123,6 +162,12 @@ const FormContact = () => {
               placeholder="Cuéntame sobre tu proyecto..."
             />
           </div>
+          {errors.message && (
+            <div className="flex items-center gap-1 mt-1 text-red-400 text-sm">
+              <AlertCircle className="w-4 h-4" />
+              <span>{errors.message}</span>
+            </div>
+          )}
         </div>
 
         <button
@@ -145,7 +190,7 @@ const FormContact = () => {
 
         {/* Mensaje de estado */}
         {submitStatus && (
-          <div className={`p-4 rounded-xl text-center font-medium ${submitStatus === 'success'
+          <div className={`p-4 rounded-xl text-center font-medium transition-all ${submitStatus === 'success'
             ? 'bg-green-100 text-green-800 border border-green-200'
             : 'bg-red-100 text-red-800 border border-red-200'
             }`}>
