@@ -33,10 +33,17 @@ const FormContact = () => {
   const EMAILJS_PUBLIC_KEY = '3OMmamS8SahCvleOf';
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     })
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: null
+      })
+    }
   }
 
   const handleSubmit = async (e) => {
