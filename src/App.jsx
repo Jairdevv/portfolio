@@ -28,7 +28,6 @@ export default function App() {
       <Helmet>
         {/* SEO básico */}
         <title>Jair Fernandez | Ingeniero de Software</title>
-        <meta name="google-site-verification" content="aATrUCip3rtYf4wEw5IFuyfeBWglcFF9y7TY07bwMQU" />
         <meta
           name="description"
           content="Portfolio de Jair Fernandez, ingeniero de software especializado en desarrollo web full-stack, optimización de rendimiento y experiencia de usuario."
