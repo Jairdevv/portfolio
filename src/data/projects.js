@@ -1,5 +1,13 @@
 const projects = [
   {
+    title: "Convertidor de archivos",
+    description:
+      "Aplicación web para convertir archivos entre diferentes formatos.",
+    tech: ["React", "Node.js", "Express"],
+    demoUrl: "https://frontfileconverter.onrender.com/",
+    githubUrl: "https://github.com/Jairdevv/file-converter-app",
+  },
+  {
     title: "Gestor de Tareas",
     description:
       "Aplicación web para gestionar tareas diarias con funcionalidades de creación, edición y eliminación.",

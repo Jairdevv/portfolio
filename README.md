@@ -1,12 +1,25 @@
-# React + Vite
+# Portfolio React - Jair Fernandez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto listo para personalizar y desplegar. Incluye SEO básico (meta tags, Open Graph, JSON-LD), estructura modular y ejemplos de proyectos.
 
-Currently, two official plugins are available:
+## Pasos rápidos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Reemplaza URLs y enlaces en `App.jsx` y `data/projects.js`.
+2. Añade `preview.jpg` en carpeta public para redes sociales.
+3. Ejecuta `npm install` y `npm run dev`.
+4. Al desplegar, activa HTTPS y añade el dominio en Google Search Console.
 
-## Expanding the ESLint configuration
+## Recomendaciones SEO técnicas (ya integradas en la plantilla)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Etiquetas `<title>` y `<meta description>` personalizadas.
+- Open Graph y Twitter Card.
+- JSON-LD con datos del autor.
+- `link rel=canonical`.
+
+## Recomendaciones para producción
+
+- Comprimir y convertir imágenes a WebP.
+- Habilitar caching y headers `Cache-Control` en el hosting.
+- Generar sitemap.xml (hay paquetes npm para esto) y subir a Google Search Console.
+- Subir `robots.txt` y permitir indexación de las páginas principales.
+- Añadir pruebas (unitarias/integración) y CI para deploys.
