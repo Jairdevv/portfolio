@@ -36,8 +36,8 @@ const Hero = () => {
 
       <div className="container mx-auto py-10 relative z-10">
         <div className="text-center animate-fade-in">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-5 leading-tight">
-            <span className="text-foreground">Hola, soy Jair</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-5 leading-tight">
+            <span className="text-foreground">Hola, soy Jair Fernandez</span>
             <br />
             <span
               key={currentWord}

@@ -19,7 +19,7 @@ const Projects = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="relative z-10">
-                <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center justify-between mb-4">
                   <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                     {project.title}
                   </h3>
@@ -45,6 +45,7 @@ const Projects = () => {
                   <a
                     href={project.demoUrl}
                     className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-30 to-primary-glow-10 text-foreground rounded-lg hover:shadow-glow hover:scale-105 transition-all duration-300 cursor-pointer"
+                    {...(project.demoUrl !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   >
                     <ExternalLink size={16} />
                     Ver Demo
@@ -52,6 +53,7 @@ const Projects = () => {
                   <a
                     href={project.githubUrl}
                     className="flex items-center gap-2 px-4 py-2 border border-primary-30 text-foreground hover:bg-primary-10 rounded-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+                    {...(project.githubUrl !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   >
                     <Github size={16} />
                     Código
