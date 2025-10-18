@@ -1,6 +1,6 @@
 import { ExternalLink, Github, Code } from "lucide-react";
 import projects from '../data/projects';
-import ProjectCard from "./ui/projectCard";
+import ProjectCard from "./ui/ProjectCard";
 
 const Projects = () => {
   return (
