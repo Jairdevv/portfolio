@@ -6,14 +6,14 @@ const ProjectCard = ({ project, index }) => {
       style={{ animationDelay: `${index * 150}ms` }}>
 
       <div className="relative h-56 overflow-hidden">
-        <div className="relative overflow-hidden w-full- h-full rounded-2xl">
+        <div className="relative overflow-hidden w-full h-full rounded-2xl ">
           <img
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background-90 via-background-50/50 to-transparent opacity-70 group-hover:opacity-50 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background-20 via-background-50/50 to-transparent opacity-20 group-hover:opacity-40 transition-opacity duration-300 rounded-2xl" />
 
         {/* Icono flotante */}
         <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-500">
