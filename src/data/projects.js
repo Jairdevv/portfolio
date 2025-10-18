@@ -6,6 +6,7 @@ const projects = [
     tech: ["React", "Node.js", "Express"],
     demoUrl: "https://frontfileconverter.onrender.com/",
     githubUrl: "https://github.com/Jairdevv/file-converter-app",
+    image: "/images/projects/file-converter.png",
   },
   {
     title: "Gestor de Tareas",
@@ -14,6 +15,16 @@ const projects = [
     tech: ["React", "Node.js", "PostgreSQL"],
     demoUrl: "#",
     githubUrl: "#",
+    image: "/images/projects/task-manager.png",
+  },
+  {
+    title: "VirtualR Website",
+    description:
+      "Sitio web corporativo para VirtualR, una empresa de tecnología sobre Realidad Virtual.",
+    tech: ["Next.js", "Tailwind CSS"],
+    demoUrl: "https://virtualr-gamma.vercel.app/",
+    githubUrl: "https://github.com/Jairdevv/Virtualr",
+    image: "/images/projects/virtualr.png",
   },
   {
     title: "E-commerce",
@@ -22,22 +33,7 @@ const projects = [
     tech: ["Next.js", "Stripe", "MongoDB"],
     demoUrl: "#",
     githubUrl: "#",
-  },
-  {
-    title: "Blog Personal",
-    description:
-      "Sitio web de blog con sistema de gestión de contenido, comentarios y diseño responsivo.",
-    tech: ["React", "Express", "MySQL"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Red Social",
-    description:
-      "Aplicación de red social con perfiles de usuario, publicaciones, amigos y mensajería en tiempo real.",
-    tech: ["React", "Socket.io", "Redis"],
-    demoUrl: "#",
-    githubUrl: "#",
+    image: "/images/projects/ecommerce.png",
   },
 ];
 
